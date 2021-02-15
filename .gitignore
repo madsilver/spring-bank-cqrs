@@ -1,8 +1,16 @@
 .idea
 /.metadata/
+
 user.core/.classpath
 user.core/.factorypath
 user.core/.mvn/*
 user.core/.project
 user.core/.settings/
 user.core/target/
+
+user.cmd.api/.classpath
+user.cmd.api/.factorypath
+user.cmd.api/.mvn/*
+user.cmd.api/.project
+user.cmd.api/.settings/
+user.cmd.api/target/
