@@ -1,0 +1,29 @@
+version: "3"
+services:
+  axon:
+    image: axoniq/axonserver:latest
+    container_name: "axon-server"
+    ports:
+      - "8024:8024"
+      - "8124:8124"
+    networks:
+      - springbankNet
+
+  mongo:
+    image: mongo:latest
+    container_name: "mongo-container"
+    ports:
+      - "27017:27017"
+    networks:
+      - springbankNet
+    volumes:
+      - 'mongodb_data_container:/data/db'
+
+networks:
+  springbankNet:
+    external: true
+
+
+volumes:
+  mongodb_data_container:
+    driver: local
