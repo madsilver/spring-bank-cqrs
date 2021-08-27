@@ -23,7 +23,6 @@ networks:
   springbankNet:
     external: true
 
-
 volumes:
   mongodb_data_container:
     driver: local
