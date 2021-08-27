@@ -30,9 +30,8 @@ public class RegisterUserController {
         command.setId(id);
 
         try {
-            commandGateway.sendAndWait(command);
-//            commandGateway.send(command);
-
+//            commandGateway.sendAndWait(command);
+            commandGateway.send(command);
             return new ResponseEntity<>(new RegisterUserResponse(id, "User successfuly registered"), HttpStatus.CREATED);
         } catch (Exception e) {
             String safeErrorMessage = "Error while processing register user  request for id - " + id;
